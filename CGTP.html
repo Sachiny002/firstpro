@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Courses</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .course-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .course {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .course:hover {
+            background-color: #f0f0f0;
+        }
+
+        .course-details {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education Courses</h1>
+    </header>
+    <div class="course-list">
+        <div class="course" onclick="toggleCourseDetails(1)">
+            <h2>Course 1: Introduction to Web Development</h2>
+            <div class="course-details" id="course-details-1">
+                <p>Description: This course covers the basics of web development, including HTML, CSS, and JavaScript.</p>
+                <p>Duration: 8 weeks</p>
+                <p>Price: free for short time</p>
+            </div>
+        </div>
+        <div class="course" onclick="toggleCourseDetails(2)">
+            <h2>Course 2: Data Science Fundamentals</h2>
+            <div class="course-details" id="course-details-2">
+                <p>Description: Learn the fundamentals of data science, including data analysis and machine learning.</p>
+                <p>Duration: 10 weeks</p>
+                <p>Price: free for short time</p>
+            </div>
+        </div>
+        <!-- Add more courses here -->
+    </div>
+
+    <script>
+        function toggleCourseDetails(courseNumber) {
+            var courseDetails = document.getElementById("course-details-" + courseNumber);
+            if (courseDetails.style.display === "none" || courseDetails.style.display === "") {
+                courseDetails.style.display = "block";
+            } else {
+                courseDetails.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
